@@ -1,6 +1,6 @@
 # HIV Bioactivity Comparative Evaluation Framework
 
-- Das, Bihter, et al. **“A Comparative Evaluation Framework Integrating Machine Learning and Deep Learning Models with ADME-Based Pharmacokinetic Assessment for HIV-Related Compounds.”** *Molecules* (MDPI), 2026.
+- Das, Bihter, et al. **“A Comparative Evaluation Framework Integrating Machine Learning and Deep Learning Models with ADME-Based Pharmacokinetic Assessment for HIV-Related Compounds.”** *Pharmaceuticals* (MDPI), 2026.
 - Authors: Bihter Das, Harun Uslu, Ayca Bostancioglu, Bunyamin Goktas, Yunus Santur, Seval Yilmaz, and Ibrahim Turkoglu
 
 Predicting the molecular biological activity of Human Immunodeficiency Virus (HIV) is critical for accelerating early-stage drug discovery. Most existing studies focus only on prediction metrics and overlook pharmacokinetic suitability and drug-likeness. This repository provides a unified experimental protocol comparing classical machine learning, deep learning, and geometric deep learning models on the MoleculeNet HIV dataset, followed by ADME and drug-likeness assessment of top candidate compounds.
