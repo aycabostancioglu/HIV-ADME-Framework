@@ -7,37 +7,51 @@ Predicting the molecular biological activity of Human Immunodeficiency Virus (HI
 
 <img width="1245" height="1813" alt="flowchart (2)-1" src="https://github.com/user-attachments/assets/55afdc81-c714-4af4-9563-bd3bd2df628d" />
 
-
 - **Best model (GDL)**: ROC-AUC **0.956 ± 0.015**
 - **Strong baselines**: GRU (**0.930 ± 0.017**) and Random Forest (**0.927 ± 0.023**)
 - **Statistical validation**: Friedman test (*p* < 0.001) with post-hoc pairwise comparisons
 - **Pharmacokinetic screening**: ADME and drug-likeness (Lipinski, Ghose, Veber, Egan, Muegge) via SwissADME
 
+## Repository structure
+
+```text
+models/
+  classical/    # SVM, RF, MLP, Mol2Vec+SVM
+  sequential/   # RNN, BRNN, GRU, CNN
+  graph/        # GCN, GAT, MPNN, GDL
+  analysis/     # statistical comparison & sensitivity analysis
+  extra/        # additional experiments (VAE)
+figures/        # workflow and data-partition figures
+paper/          # manuscript (main.tex)
+```
+
 ## Models
 
-### Classical machine learning
+### Classical machine learning (`models/classical/`)
 - `SVM_HIV_5Fold_Statistics_with_docking_prep.ipynb` — Support Vector Machine with Morgan fingerprints
 - `RandomForest_HIV_5Fold_Statistics_with_docking_prep.ipynb` — Random Forest with Morgan fingerprints
 - `MLP_with_docking_prep.ipynb` — Multilayer Perceptron
 - `Mol2Vec_SVM_HIV7_5Fold_Reproducible.ipynb` — Mol2Vec embeddings + SVM
 
-### Sequential deep learning
+### Sequential deep learning (`models/sequential/`)
 - `RNN_HIV_5Fold_Statistics_with_docking_prep_colab.ipynb` — Recurrent Neural Network on SMILES
 - `BRNN_HIV_5Fold_Statistics_with_docking_prep_colab.ipynb` — Bidirectional RNN
 - `GRU_HIV_5Fold_Statistics_with_docking_prep_colab.ipynb` — Gated Recurrent Unit
 - `CNN_HIV_5Fold_Statistics_with_docking_prep_colab.ipynb` — 1D Convolutional Neural Network
 - `CNN_HIV_5Fold_Statistics.ipynb` — CNN baseline (without docking prep)
-- `VAE_HIV_5Fold_Statistics_v3_EarlyStop_AccCurves.ipynb` — Variational Autoencoder
 
-### Graph-based geometric deep learning
+### Graph-based geometric deep learning (`models/graph/`)
 - `GCN_HIV_5Fold_Statistics_with_docking_prep_colab.ipynb` — Graph Convolutional Network
 - `GAT_HIV_5Fold_Statistics_with_docking_prep_colab.ipynb` — Graph Attention Network
 - `MPNN_HIV_5Fold_Statistics_with_docking_prep_colab.ipynb` — Message Passing Neural Network
 - `GDL_HIV_docking_prep_colab.ipynb` — Proposed geometric deep learning (GDL) model
 
-### Analysis
-- `hiv_statistical_comparison_12_models.ipynb` — Friedman test and post-hoc statistical comparison across 12 models
-- `Inactive_Sampling_Sensitivity_RF_V4_Pure_Fingerprint_Colab.ipynb` — Inactive-sampling sensitivity analysis (Random Forest)
+### Analysis (`models/analysis/`)
+- `hiv_statistical_comparison_12_models.ipynb` — Friedman test and post-hoc comparison across 12 models
+- `Inactive_Sampling_Sensitivity_RF_V4_Pure_Fingerprint_Colab.ipynb` — Inactive-sampling sensitivity analysis (RF)
+
+### Extra (`models/extra/`)
+- `VAE_HIV_5Fold_Statistics_v3_EarlyStop_AccCurves.ipynb` — Variational Autoencoder (additional experiment)
 
 Each notebook contains training, 5-fold cross-validation, and evaluation code for the corresponding architecture on the HIV bioactivity task.
 
@@ -59,7 +73,7 @@ Data partitioning used in the experimental protocol (stratified train / validati
     cd HIV-ADME-Comparative-Evaluation
     ```
 
-3. Open the notebooks in [Google Colab](https://colab.research.google.com/) or a local Jupyter environment with Python 3 and common ML/DL libraries (e.g., scikit-learn, PyTorch / TensorFlow, RDKit, PyTorch Geometric where required).
+3. Open the notebooks under `models/` in [Google Colab](https://colab.research.google.com/) or a local Jupyter environment with Python 3 and common ML/DL libraries (e.g., scikit-learn, PyTorch / TensorFlow, RDKit, PyTorch Geometric where required).
 
 ## Contributing
 
