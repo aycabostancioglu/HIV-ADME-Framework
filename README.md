@@ -21,8 +21,7 @@ models/
   graph/        # GCN, GAT, MPNN, GDL
   analysis/     # statistical comparison & sensitivity analysis
   extra/        # additional experiments (VAE)
-figures/        # workflow and data-partition figures
-paper/          # manuscript (main.tex)
+figures/        # workflow, data partition, and result plots
 ```
 
 ## Models
@@ -58,6 +57,24 @@ Each notebook contains training, 5-fold cross-validation, and evaluation code fo
 Data partitioning used in the experimental protocol (stratified train / validation / test split):
 
 <img width="561" height="502" alt="data_partition" src="https://github.com/user-attachments/assets/a322a8ae-9fef-4cb4-b75c-5619b402a80e" />
+
+## Results
+
+Accuracy curves of deep learning and geometric deep learning models:
+
+<img width="502" height="655" alt="acc" src="https://github.com/user-attachments/assets/434d6614-f01e-498f-abf3-c7a880c752b1" />
+
+Loss curves of deep learning and geometric deep learning models:
+
+<img width="505" height="647" alt="loss" src="https://github.com/user-attachments/assets/d5819ec0-dabb-4876-928d-682b7deda298" />
+
+ROC curves for 5-fold cross-validation:
+
+<img width="505" height="647" alt="loss" src="https://github.com/user-attachments/assets/18c6d8e2-2ecb-48ff-84cf-a2de9387a426" />
+
+Mean ROC-AUC comparison across models:
+
+<img width="989" height="490" alt="mean_roc_auc" src="https://github.com/user-attachments/assets/6762533b-d632-49cf-b2e0-8e1d3952e885" />
 
 ## Setup Environment
 
