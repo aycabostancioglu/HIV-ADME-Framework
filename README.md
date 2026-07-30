@@ -5,6 +5,10 @@
 
 Predicting the molecular biological activity of Human Immunodeficiency Virus (HIV) is critical for accelerating early-stage drug discovery. Most existing studies focus only on prediction metrics and overlook pharmacokinetic suitability and drug-likeness. This repository provides a unified experimental protocol comparing classical machine learning, deep learning, and geometric deep learning models on the MoleculeNet HIV dataset, followed by ADME and drug-likeness assessment of top candidate compounds.
 
+## Dataset
+
+The original application dataset contains **3,043 unique compounds** (**1,443 active** and **1,600 inactive**). The full MoleculeNet HIV pool is provided under `dataset/` for reference. In a sensitivity analysis, we generated **30 independent chemically matched alternative inactive subsets** from the MoleculeNet HIV inactive pool while keeping the active compounds fixed.
+
 <img width="1245" height="1813" alt="flowchart (2)-1" src="https://github.com/user-attachments/assets/55afdc81-c714-4af4-9563-bd3bd2df628d" />
 
 - **Best model (GDL)**: ROC-AUC **0.956 ± 0.015**
@@ -15,6 +19,7 @@ Predicting the molecular biological activity of Human Immunodeficiency Virus (HI
 ## Repository structure
 
 ```text
+dataset/        # original application set + full MoleculeNet HIV pool
 models/
   classical/    # SVM, RF, MLP, Mol2Vec+SVM
   sequential/   # RNN, BRNN, GRU, CNN
