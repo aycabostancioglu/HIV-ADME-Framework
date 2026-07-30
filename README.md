@@ -21,8 +21,6 @@ models/
   graph/        # GCN, GAT, MPNN, GDL
   analysis/     # statistical comparison & sensitivity analysis
   extra/        # additional experiments (VAE)
-figures/        # workflow and data-partition figures
-paper/          # manuscript (main.tex)
 ```
 
 ## Models
