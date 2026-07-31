@@ -9,7 +9,8 @@ Predicting the molecular biological activity of Human Immunodeficiency Virus (HI
 
 The original application dataset contains **3,043 unique compounds** (**1,443 active** and **1,600 inactive**). The full MoleculeNet HIV pool is provided under `dataset/` for reference. In a sensitivity analysis, we generated **30 independent chemically matched alternative inactive subsets** from the MoleculeNet HIV inactive pool while keeping the active compounds fixed.
 
-<img width="1245" height="1813" alt="flowchart (2)-1" src="https://github.com/user-attachments/assets/55afdc81-c714-4af4-9563-bd3bd2df628d" />
+<img width="1404" height="2078" alt="flowchart" src="https://github.com/user-attachments/assets/edb27f46-0029-4762-8ffb-5e53aff61b02" />
+
 
 - **Best model (GDL)**: ROC-AUC **0.956 ± 0.015**
 - **Strong baselines**: GRU (**0.930 ± 0.017**) and Random Forest (**0.927 ± 0.023**)
